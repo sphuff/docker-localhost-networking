@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  server:
+    build: ./server
+    ports: 
+      - "5000:5000"
+  client_error:
+    build: ./client-error
+  client_working_host:
+    build: ./client-error
+    network_mode: "host"
+  client_working_alias:
+    build: ./client-working-alias
